@@ -1,5 +1,5 @@
 FROM ubuntu:12.04
-
+#
 MAINTAINER bandit tg @Hi_Matherfucker
 
 # Копирования сайта 
