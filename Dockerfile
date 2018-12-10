@@ -17,4 +17,4 @@ ADD curl.sh /home/ubuntu
 
 
 
-CMD ["/home/ubuntu/curl.sh"]
+#CMD ["/home/ubuntu/curl.sh"]
