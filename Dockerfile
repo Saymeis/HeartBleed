@@ -2,8 +2,8 @@ FROM ubuntu:12.04
 #
 MAINTAINER bandit tg @Hi_Matherfucker
 
-RUN apt-get update &&\
-	apt-get install apt-utils7 &&\
+RUN	apt-get update 
+RUN	apt-get install apt-utils7 &&\
 	apt-get install openssl=1.0.1-4ubuntu3
 
 
