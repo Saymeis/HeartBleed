@@ -6,7 +6,7 @@ RUN	apt-get update
 RUN	apt-get install debconf -y
 RUN	apt-get install apt-utils -y 
 RUN	apt-get install openssl=1.0.1-4ubuntu3 -y
-
+RUN	apt-get install nginx=1.1.19-1ubuntu0.8
 
 
 
