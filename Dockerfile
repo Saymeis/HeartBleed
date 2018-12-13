@@ -10,7 +10,7 @@ RUN	apt-get install openssl=1.0.1-4ubuntu3 -y
 RUN	apt-get update &&\
 	apt-get install php5 -y
 RUN     apt-get install nginx=1.1.19-1ubuntu0.8 -y
-
+RUN	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
 
 
 
