@@ -12,7 +12,7 @@ RUN	apt-get update &&\
 RUN     apt-get install nginx=1.1.19-1ubuntu0.8 -y
 RUN	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
 RUN	openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
-
+RUN	openssl req -out CSR.csr -key privateKey.key -new
 
 
 
