@@ -1,0 +1,43 @@
+Sending build context to Docker daemon  11.33MB
+Step 1/13 : FROM ubuntu:12.04
+ ---> 5b117edd0b76
+Step 2/13 : MAINTAINER bandit tg @Hi_Matherfucker
+ ---> Using cache
+ ---> 3195e3f1d964
+Step 3/13 : RUN	apt-get update
+ ---> Using cache
+ ---> 47fd9d6ffbda
+Step 4/13 : RUN	apt-get upgrade -y
+ ---> Using cache
+ ---> 2f27a1ac4e91
+Step 5/13 : RUN	apt-get install debconf -y
+ ---> Using cache
+ ---> a67dd83e01b5
+Step 6/13 : RUN	apt-get install apt-utils -y
+ ---> Using cache
+ ---> fa469941cc7a
+Step 7/13 : RUN	apt-get install openssl=1.0.1-4ubuntu3 -y
+ ---> Using cache
+ ---> e7042b23f6d1
+Step 8/13 : RUN	apt-get update &&	apt-get install php5 -y
+ ---> Using cache
+ ---> e0984dc6ab42
+Step 9/13 : RUN     apt-get install nginx=1.1.19-1ubuntu0.8 -y
+ ---> Using cache
+ ---> adb442aa1e4a
+Step 10/13 : RUN	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
+ ---> Running in 63f33d7bb7a3
+[91mGenerating a 2048 bit RSA private key
+.[0m[91m...[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m+[0m[91m+[0m[91m+[0m[91m
+[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m+[0m[91m+[0m[91m+
+[0m[91mwriting new private key to 'privateKey.key'
+[0m[91m-----
+[0m[91mYou are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:problems making Certificate Request
+[0m
