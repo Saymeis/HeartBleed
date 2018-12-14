@@ -4,12 +4,12 @@ MAINTAINER bandit tg @Hi_Matherfucker
 #Тут нужно сделать выполнения этого скрипта
 ADD	curl.sh /home/ubuntu
 
-RUN	apt-get update 				   &&\
+RUN	apt-get update                             &&\
 	apt-get upgrade -y			   &&\
 	apt-get install debconf -y		   &&\
-	apt-get install apt-utils -y 		   &&\
+	apt-get install apt-utils -y               &&\
 	apt-get install openssl=1.0.1-4ubuntu3 -y  &&\
-	apt-get update 				   &&\
+	apt-get update                             &&\
 	apt-get install php5 -y			   &&\
         apt-get install nginx=1.1.19-1ubuntu0.8 -y &&\
 CMD	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
