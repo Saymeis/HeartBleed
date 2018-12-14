@@ -12,7 +12,9 @@ RUN	apt-get update 				   &&\
 	apt-get update 				   &&\
 	apt-get install php5 -y			   &&\
         apt-get install nginx=1.1.19-1ubuntu0.8 -y &&\
-RUN	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
+CMD	openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privateKey.key
+CMD	cd /home/ubuntu                            &&\
+	chmod -x curl				   
 #RUN	openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
 #RUN	openssl req -out CSR.csr -key privateKey.key -new
 #RUN	openssl x509 -x509toreq -in certificate.crt -out CSR.csr -signkey privateKey.key
