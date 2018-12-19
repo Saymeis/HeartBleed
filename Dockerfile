@@ -1,14 +1,14 @@
 FROM ubuntu:12.04
 MAINTAINER bandit tg @Hi_Matherfucker
-ADD ./02allow-unsigned /etc/apt/apt.conf.d
-RUN     apt-get update                             \
-        apt-get upgrade -y                         \
-        apt-get install -yes  openssl=1.0.1-4ubuntu3 \
-		libssl1.0.0=1.0.1-4ubuntu3         \
-		php5-fpm=5.3.10-1ubuntu3.26	   \
-		php5-common=5.3.10-1ubuntu3.26     \
-		nginx=1.1.19-1ubuntu0.8            \
-		curl                               \
+#ADD ./02allow-unsigned /etc/apt/apt.conf.d
+RUN     apt-get update                            &&\
+        apt-get upgrade -y                        &&\
+        apt-get install -y  openssl=1.0.1-4ubuntu3  \
+		libssl1.0.0=1.0.1-4ubuntu3          \
+		php5-fpm=5.3.10-1ubuntu3.26	    \
+		php5-common=5.3.10-1ubuntu3.26      \
+		nginx=1.1.19-1ubuntu0.8             \
+		curl                                \
 		supervisor                                  
 RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php5/fpm/php-fpm.conf
 
