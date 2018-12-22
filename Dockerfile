@@ -29,5 +29,5 @@ RUN chmod +x /usr/local/bin/curl.sh
 #openssl genrsa -des3 -out heartbleed.key 2048 &&\
 #openssl x509 -in heartbleed.crt -signkey heartbleed.key -x509toreq -out heartbleed.csr &&\
 #openssl x509 -signkey heartbleed.key -in heartbleed.csr -req -days 365 -out heartbleed.crt 
-
+EXPOSE 80 443
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
