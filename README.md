@@ -1,5 +1,9 @@
-#Привет, не пытайтесь качать мое говнецо, оно еще не работает 
+### HeartBleed уязвимость в docker
+=============================
 
-#Полезные ссылки 
-#openSSL https://www.openssl.org/source/old/1.0.1/
+1. git clone https://github.com/Saymeis/HeartBleed.git
+2. cd HeartBleed
+2. sudo docker build -t heartbleed -f Dockerfile .
+3. sudo  docker run -p 80:80 -p 443:443 -d heartbleed
+
 	
